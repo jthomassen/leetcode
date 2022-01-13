@@ -1,6 +1,5 @@
 function kidsWithCandies(candies, extraCandies) {
     let maxCandy = 0
-    let newArr = []
     
     for (let candy of candies) {
         if (candy > maxCandy) {
@@ -9,14 +8,14 @@ function kidsWithCandies(candies, extraCandies) {
     }
     
     for (let i = 0; i < candies.length; i++) {
-        candies[i] += extraCandies
+        candies[i] += extraCandies 
         if (candies[i] >= maxCandy) {
-            newArr.push(true)
+            candies[i] = true
         } else {
-            newArr.push(false)
+            candies[i] = false
         }
     }
     
-    return newArr
+    return candies
     
 };
